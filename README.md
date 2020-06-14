@@ -28,7 +28,7 @@ The final submission is a fully functional web app.
 
 ## Resources
 
-Under construction
+The class example to add and remove the tic tac toe board contains the initial HTML, CSS and Javascript code - [add_remove_board.html](add_remove_board.html). Use it to incorporate into your write up.
 
 ---
 
