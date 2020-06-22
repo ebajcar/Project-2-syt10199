@@ -19,10 +19,10 @@ The prerequisites for this project is the completion of worksheets 1, 2, 3, and 
 The first submission contains the results of your analysis and design.
 
 ### Phase 2
-The second version is an intermediate stage that may not be fully completed; aim for 80% completion.
+The second version is an intermediate stage ~~that may not be fully completed; aim for 80% completion.~~ Start with the [initial code](ttt_initial_code.html). Do not make changes to the CSS and HTML. Make sure to add and update appropriate comments. This is your opportunity to demonstrate how well you have studied the material presented in the course. 
 
 ### Phase 3
-The final submission is a fully functional web app.
+The final submission is a fully object-oriented version.
 
 ---
 
