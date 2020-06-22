@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>initial code Tic Tac Toe</title>
+
+    <style>
+/* CSS files add styling rules to your content */
+@import url("https://fonts.googleapis.com/css?family=Akronim|Asap+Condensed|Luckiest+Guy");
+:root {
+  --bgwhite: #fff;
+  --sherblue: #093D6D;
+  --sherteal: #1AC6D9;
+  --sherorange: #ff5C10;
+  --fontfam: "Luckiest Guy", cursive;
+  --gap-sm: 5px;
+  --gap-md: 10px;
+  --gap-lg: 25px;
+}
+
+html,
+body,
+main,
+header,
+footer,
+h1,
+.flex-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+body {
+  font-family: var(--fontbody);
+  background-color: var(--sherteal);
+}
+/* position needs to be non-static to allow the positioning of the images relative to its parent */
+main {
+  background-color: var(--bgwhite);
+  padding: var(--gap-sm);
+  position: relative;
+}
+footer {
+  border-top: 5px solid;
+  color: var(--sherblue);
+  padding-top: var(--gap-sm);
+  text-align: center;
+}
+header {
+  border-bottom: 17px solid var(--sherblue);
+  padding: 10px;
+  text-align: center;
+}
+/* major heading for the project on all pages */
+header h1 {
+  color: var(--sherblue);
+  font-family: var(--fonttitle);
+  font-size: 7vw; /* check out the vw units */
+  text-shadow: 1px 1px 2px var(--sherorange), 3px 3px 4px var(--bgwhite);
+}
+
+table {
+  margin: 20px auto;
+  background-color: transparent;
+}
+td {
+  height: 50px;
+  width: 50px;
+  font-size: 2.2em;
+  font-family: sans-serif;
+  border: 1px solid #00CCCC;
+  background-color: transparent;
+}
+td:nth-child(1) {
+  border-left-style: none;
+}
+td:nth-child(3) {
+  border-right-style: none;
+}
+tr:nth-child(1)>td {
+  border-top-style: none;
+}
+tr:nth-child(3)>td {
+  border-bottom-style: none;
+}
+.grid-item {
+  text-align: center;
+}
+    </style>
+
+  </head>
+  <body>
+    <header><h2>Play &mdash; Tic Tac Toe</h2></header>
+    <main>
+      <div class="grid-container">
+        <div id="board" class="grid-item">
+          <table>
+            <tr>
+              <td>T</td>
+              <td>I</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td>A</td>
+              <td>T</td>
+            </tr>
+            <tr>
+              <td>T</td>
+              <td>O</td>
+              <td>E</td>
+            </tr>
+          </table>
+        </div>
+        <div class="grid-item">
+          <button id="greset">Reset game</button>
+          <p>Player <span id="player">X</span> go!</p>
+          <h2 id="message"></h2>
+        </div>
+      </div>
+    </main>
+    <footer><address>Web Programming @ Sheridan College</address></footer>
+
+<script>
+/* 
+  set up all variables and data structures
+*/
+
+// current player
+var player = "X"; 
+
+//create an array (collection) of nine (9) objects, since there are nine <td> elements 
+//Each handler provides access to the object's properties, methods, and events
+var board = document.getElementsByTagName("td"); 
+
+//all winning combinations, 3 rows, 3 columns, 2 diagonals (other ways to set this up)
+var winSets = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]; 
+
+// number of available (empty) cells
+var empty = 9; 
+
+// game not in session (false if in process)
+var gameover = false;  
+
+
+
+/* 
+  set up all functions
+*/
+
+// called by checkWin functions
+function displayWin() {
+  
+}
+
+// called by cellClick function
+function checkWin() {
+  
+}
+
+// called by event listener
+function cellClick(cell) {
+  
+}  
+
+// called by event listener
+function gameReset() {
+  
+} 
+
+/*
+	Set up event listeners
+	1. when user clicks on the reset button (id="greset")
+	2. when user clicks on the the 9 cells of the board
+*/
+document.getElementById("greset").addEventListener("click", gameReset);
+  
+for (var i=0; i < board.length; i++) {
+  board[i].addEventListener("click", function() {
+                                       cellClick(this);
+                                     }
+                           );
+}
+</script>
+</body>
+</html>
